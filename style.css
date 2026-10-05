@@ -1,0 +1,347 @@
+/* variabili colori */
+:root {
+    --ink: #241b16;
+    --muted: #7d6f66;
+    --line: #eadfd3;
+    --accent: #b8401c;
+    --blue: #4f5bd5;
+    --rose: #c2426d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fbf5ef;
+    color: var(--ink);
+    font: 15px/1.5 "DM Sans", sans-serif;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
+.mono {
+    font-family: "DM Mono", monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+/* colori dei titoletti delle card */
+.accent { color: var(--accent); }
+.blue { color: var(--blue); }
+.rose { color: var(--rose); }
+
+/* ---------- barra laterale ---------- */
+aside {
+    border-right: 1px solid var(--line);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.logo {
+    font-family: "Newsreader", serif;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 16px;
+}
+
+.logo i {
+    display: block;
+    font-size: 13px;
+    color: var(--accent);
+}
+
+.logo b {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+nav li:hover {
+    background: #eee5dc;
+}
+
+.meteo {
+    margin-top: auto;
+    background: #f6d36b;
+    border-radius: 14px;
+    padding: 14px;
+    color: #3b2a0c;
+}
+
+.meteo b {
+    display: block;
+    font-family: "Newsreader", serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.meteo small {
+    font-size: 12px;
+}
+
+.foot {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--line);
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+/* ---------- contenuto principale ---------- */
+main {
+    padding: 28px 32px 48px;
+}
+
+h1 {
+    font: 400 44px "Newsreader", serif;
+    margin: 8px 0 0;
+}
+
+h1 em {
+    color: var(--accent);
+}
+
+/* ---------- le due card centrali ---------- */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.card {
+    width: 400px;
+    height: 430px;
+    padding: 26px 30px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.receipt {
+    background: #fffdf9;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(74, 42, 24, 0.15);
+}
+
+.receipt-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+}
+
+.receipt-top span:last-child {
+    text-align: right;
+    font-size: 10px;
+}
+
+.receipt h3 {
+    font: 500 22px "Newsreader", serif;
+    margin: 6px 0 14px;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed var(--line);
+    border-bottom: 1px dashed var(--line);
+    padding: 16px 4px;
+    margin-bottom: 12px;
+}
+
+.dates b {
+    display: block;
+    font: 500 30px "Newsreader", serif;
+}
+
+.dates span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.tot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--ink);
+    margin-top: 14px;
+    padding-top: 10px;
+}
+
+.tot span {
+    color: var(--muted);
+}
+
+.tot b {
+    font: 500 28px "Newsreader", serif;
+}
+
+.paid {
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+.welcome {
+    background: linear-gradient(150deg, #e07a3f, #9c3a1c);
+    border-radius: 22px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(184, 64, 28, 0.35);
+}
+
+.welcome .mono {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.welcome .note {
+    font: italic 400 19px "Newsreader", serif;
+    color: #ffd9a8;
+    margin: 62px 0 2px;
+}
+
+.welcome h2 {
+    font: italic 400 44px "Newsreader", serif;
+    margin: 0 0 20px;
+}
+
+.welcome .msg {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.room {
+    position: absolute;
+    left: 30px;
+    bottom: 26px;
+}
+
+.room b {
+    display: block;
+    font: 500 22px "Newsreader", serif;
+}
+
+/* ---------- le tre card in basso ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.info {
+    background: #fdfaf6;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.n {
+    font: 400 26px "Newsreader", serif;
+}
+
+.info h4 {
+    font: 500 26px "Newsreader", serif;
+    margin: 26px 0 4px;
+}
+
+.sub {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.info p {
+    margin: 0;
+}
+
+.kv {
+    display: flex;
+    justify-content: space-between;
+    background: #f1ece7;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.kv .mono {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* ---------- schermi piccoli ---------- */
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: static;
+        height: auto;
+    }
+
+    .meteo,
+    .foot {
+        display: none;
+    }
+
+    main {
+        padding: 20px 16px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
